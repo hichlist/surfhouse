@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   {% load static %}
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href={% static "css/style.css" %}>
     <title>LongsLife</title>
 </head>
 <body>
    <div class="around">
        <div class="container">
            <div class="header">
-               <a href="main.html"><img id="logo" src="img/Logo_long_s.png"></a>
+               <a href="main.html"><img id="logo" src={% static "img/Logo_long_s.png" %}></a>
                
                    <h1 id="slogan">Longboard - like a lifestyle!</h1>               
            </div>
                <ul class="menu">
-                       <a href="main.html"><li>Main</li></a>
-                       <li><a href="catalog.html">Catalog</a>
+                       <a href="/"><li>Main</li></a>
+                       <li><a href="/catalog/">Catalog</a>
                            <ul class="menu_list">
                                <a href="long1.html"><li>Long1</li></a>
                                <a href="long2.html"><li>Long2</li></a>
@@ -23,7 +24,7 @@
                                <a href="long4.html"><li>Long4</li></a>
                            </ul>
                         </li>
-                       <a href="contacts.html"><li>Contacts</li></a> 
+                       <a href="/contacts/"><li>Contacts</li></a> 
                    </ul>
            <div class="content">
                <div class="text">
