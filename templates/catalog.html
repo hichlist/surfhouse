@@ -1,55 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   {% load static %}
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href={% static "css/style.css" %}>
-    <title>LongsLife</title>
-</head>
-<body>
-   <div class="around">
-       <div class="container">
-           <div class="header">
-               <a href="main.html"><img id="logo" src={% static "img/Logo_long_s.png" %}></a>
-               
-                   <h1 id="slogan">Longboard - like a lifestyle!</h1>               
-           </div>
-               <ul class="menu">
-                       <a href="/"><li>Main</li></a>
-                       <li><a href="/catalog/">Catalog</a>
-                           <ul class="menu_list">
-                               <a href="long1.html"><li>Long1</li></a>
-                               <a href="long2.html"><li>Long2</li></a>
-                               <a href="long3.html"><li>Long3</li></a>
-                               <a href="long4.html"><li>Long4</li></a>
-                           </ul>
-                        </li>
-                       <a href="/contacts/"><li>Contacts</li></a> 
-                   </ul>
-           <div class="content">
-               <a href="long1.html"><div class="item">
-                   <img src="img/long1_s.jpg">
+{% extends "base.html" %}
+   {% load staticfiles %}
+    
+    {% block title %}
+    {{block.super}} | Catalog
+    {% endblock %}
+        {% block content %}
+               <a href="/long1/"><div class="item">
+                   <img src={% static "img/long1_s.jpg" %}>
                    Long1
                    </div></a>
-               <a href="long2.html"><div class="item">
-                   <img src="img/long2_s.jpg">
+               <a href="/long2/"><div class="item">
+                   <img src={% static "img/long2_s.jpg" %}>
                    Long2
                    </div></a>
-               <a href="long3.html"><div class="item">
-                   <img src="img/long3_s.jpg">
+               <a href="/long3/"><div class="item">
+                   <img src={% static "img/long3_s.jpg" %}>
                    Long3
                    </div></a>
-               <a href="long4.html"><div class="item">
-                   <img src="img/long4_s.jpg">
+               <a href="/long4/"><div class="item">
+                   <img src={% static "img/long4_s.jpg" %}>
                    Long4
                    </div></a>
-           </div>
-           <div class="clear"></div>
-           <div class="footer">
-               All right reserved &copy;
-           </div>
-       </div>
-   </div>
-    
-</body>
-</html>
+        {% endblock %}
+           

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% load staticfiles %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href= {% static "css/style.css" %}>
+    <title>
+    {% block title %}
+    LongsLife
+    {% endblock %}
+    </title>
+</head>
+<body background={% static "img/texture.jpg" %}>
+   <div class="around">
+       <div class="container">
+           <div class="header">
+               <a href="/"><img id="logo" src={% static "img/Logo_long_s.png" %}></a>
+               
+                   <h1 id="slogan">Longboard - like a lifestyle!</h1>               
+           </div>
+               <ul class="menu">
+                       <a href="/"><li>Main</li></a>
+                       <li><a href="/catalog/">Catalog</a>
+                           <ul class="menu_list">
+                               <a href="/long1/"><li>Long1</li></a>
+                               <a href="/long2/"><li>Long2</li></a>
+                               <a href="/long3/"><li>Long3</li></a>
+                               <a href="/long4/"><li>Long4</li></a>
+                           </ul>
+                        </li>
+                       <a href="/contacts/"><li>Contacts</li></a> 
+                   </ul>
+           <div class="content">
+             {% block content %}
+             {% endblock %}
+           </div>
+           <div class="clear"></div>
+           <div class="footer">
+               All right reserved &copy;
+           </div>
+       </div>
+   </div>
+    
+</body>
+</html>

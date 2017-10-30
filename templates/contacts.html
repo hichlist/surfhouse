@@ -1,32 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   {% load static %}
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href={% static "css/style.css" %}>
-    <title>LongsLife</title>
-</head>
-<body>
-   <div class="around">
-       <div class="container">
-           <div class="header">
-               <a href="main.html"><img id="logo" src={% static "img/Logo_long_s.png" %}></a>
-               
-                   <h1 id="slogan">Longboard - like a lifestyle!</h1>               
-           </div>
-               <ul class="menu">
-                       <a href="/"><li>Main</li></a>
-                       <li><a href="/catalog/">Catalog</a>
-                           <ul class="menu_list">
-                               <a href="long1.html"><li>Long1</li></a>
-                               <a href="long2.html"><li>Long2</li></a>
-                               <a href="long3.html"><li>Long3</li></a>
-                               <a href="long4.html"><li>Long4</li></a>
-                           </ul>
-                        </li>
-                       <a href="/contacts/"><li>Contacts</li></a> 
-                   </ul>
-           <div class="content">
+{% extends "base.html" %}
+   {% load staticfiles %}
+    
+    {% block title %}
+    {{block.super}} | Contacts
+    {% endblock %}
+        {% block content %}
                <div class="text">
                     <p>
                         You can contact us at any time during working hours from monday to friday in between <b>9 A.M</b> and <b>6 P.M.</b> <br>
@@ -54,13 +32,4 @@
                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28093.421268317867!2d-0.1279887293585106!3d51.51081103480771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sru!4v1492549208855" width="934" height="450" frameborder="0" style="border:1px solid #BEBEBE" allowfullscreen></iframe>
                     </div>
    
-           </div>
-           <div class="clear"></div>
-           <div class="footer">
-               All right reserved &copy;
-           </div>
-       </div>
-   </div>
-    
-</body>
-</html>
+           {% endblock %}
