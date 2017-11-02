@@ -7,14 +7,16 @@
         {% block content %}
                <a href="img/long1.jpg"><div class="item">
                    <img src={% static "img/long1_s.jpg" %}>
-                   Long1
-                   </div></a>
-               <ul class="description">
-                    <li>40 inch length X 90 inch width</li>
-                    <li>Multiple Layers Canadian Maple </li>
-                    <li>70mm X 50mm High Rebound Urethane Wheels </li>
-                    <li>Durable Abec 7 Hellion Bearings</li>
-                </ul>
-                <b class="price">Price: 100 USD</b>
+                   {{ item.0.product_name }}
+                   </div></a>   
+                       <ul class="description">
+                            <li>{{ item.0.product_size }}</li>
+                            <li>{{ item.0.product_material }}</li>
+                            <li>{{ item.0.product_wheels }}</li>
+                            <li>{{ item.0.product_size }}</li>
+                        </ul>
+                    
+                    <b class="price">Price: 100 USD</b>
+                
                 <button class="button" type="button">Buy now!</button>
         {% endblock %}

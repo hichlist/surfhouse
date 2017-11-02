@@ -19,11 +19,11 @@ import main_app.views as main_app
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', main_app.main),
-    url(r'^catalog/', main_app.catalog),
-    url(r'^contacts/', main_app.contacts),
-    url(r'^long1', main_app.long1),
-    url(r'^long2', main_app.long2),
-    url(r'^long3', main_app.long3),
-    url(r'^long4', main_app.long4),
+    url(r'^$', main_app.main, name='main'),
+    url(r'^catalog/', main_app.catalog, name='catalog'),
+    url(r'^contacts/', main_app.contacts, name='contacts'),
+    url(r'^long1', main_app.long1, name='long1'),
+    url(r'^long2', main_app.long2, name='long2'),
+    url(r'^long3', main_app.long3, name='long3'),
+    url(r'^long4', main_app.long4, name='long4'),
 ]

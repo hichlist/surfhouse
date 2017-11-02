@@ -5,16 +5,15 @@
     {{block.super}} | Catalog
     {% endblock %}
         {% block content %}
-               
                <a href="img/long2.jpg"><div class="item">
                    <img src={% static "img/long2_s.jpg" %}>
-                   Long2
+                   {{ item.1.product_name }}
                    </div></a>
                <ul class="description">
-                    <li>41 inch length X 9.25 inch width</li>
-                    <li>Multiple Layers of Bamboo and Canadian Maple</li>
-                    <li>70mm X 50mm High Rebound Urethane Wheels</li>
-                    <li>Fast and Durable Abec 9 Hellion Bearings</li>
+                    <li>{{ item.1.product_size }}</li>
+                    <li>{{ item.1.product_material }}</li>
+                    <li>{{ item.1.product_wheels }}</li>
+                    <li>{{ item.1.product_size }}</li>
                 </ul>
                 <b class="price">Price: 120 USD</b>
                 <button class="button" type="button">Buy now!</button>
